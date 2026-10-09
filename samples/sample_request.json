@@ -1,0 +1,46 @@
+{
+  "title": "Advanced Python Workshop 2026",
+  "issue_date": "2026-10-09",
+  "recipients": [
+    {
+      "name": "Aarav Sharma",
+      "email": "aarav@example.com"
+    },
+    {
+      "name": "Diya Patel",
+      "email": "diya@example.com"
+    },
+    {
+      "name": "Rohan Verma",
+      "email": "rohan@example.com"
+    },
+    {
+      "name": "Ananya Iyer",
+      "email": "ananya@example.com"
+    },
+    {
+      "name": "Kabir Singh",
+      "email": "kabir@example.com"
+    },
+    {
+      "name": "Meera Nair",
+      "email": "meera@example.com"
+    },
+    {
+      "name": "Arjun Reddy",
+      "email": "arjun@example.com"
+    },
+    {
+      "name": "Ishita Bose",
+      "email": "ishita@example.com"
+    },
+    {
+      "name": "Vivaan Joshi",
+      "email": "vivaan@example.com"
+    },
+    {
+      "name": "Saanvi Kulkarni",
+      "email": "saanvi@example.com"
+    }
+  ]
+}

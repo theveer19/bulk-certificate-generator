@@ -1,0 +1,41 @@
+# Runs the API against PostgreSQL, demonstrating that the same code works on
+# both supported databases. For a zero-setup run, start the app directly with
+# uvicorn instead and let it use the default SQLite database.
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: certificates
+      POSTGRES_PASSWORD: certificates
+      POSTGRES_DB: certificates
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U certificates"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  api:
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql+psycopg2://certificates:certificates@db:5432/certificates
+      STORAGE_DIR: /app/storage/certificates
+      ORGANIZATION_NAME: OneT Digital Solutions
+      SIGNATORY_NAME: Veer Gurjar
+      SIGNATORY_TITLE: Director
+    ports:
+      - "8000:8000"
+    volumes:
+      # Generated certificates survive a container rebuild.
+      - certificate_storage:/app/storage/certificates
+
+volumes:
+  postgres_data:
+  certificate_storage:

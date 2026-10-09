@@ -1,0 +1,30 @@
+{
+  "title": "Full Stack Development Bootcamp",
+  "issue_date": "2026-10-09",
+  "recipients": [
+    {
+      "name": "Aarav Sharma",
+      "email": "aarav@example.com"
+    },
+    {
+      "name": "   ",
+      "email": "blank.name@example.com"
+    },
+    {
+      "name": "Diya Patel",
+      "email": "diya-at-example"
+    },
+    {
+      "name": "Rohan Verma",
+      "email": "rohan@example.com",
+      "course_name": "Full Stack Development Bootcamp (Honours)"
+    },
+    {
+      "name": "aarav sharma",
+      "email": "AARAV@example.com"
+    },
+    {
+      "name": "Ananya Iyer"
+    }
+  ]
+}

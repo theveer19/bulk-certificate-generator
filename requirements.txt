@@ -1,0 +1,17 @@
+# Runtime dependencies.
+#
+# Everything here installs from wheels on Windows, macOS and Linux with no
+# system libraries, compilers or external binaries required — which is why the
+# PDFs are drawn with ReportLab rather than an HTML-to-PDF engine.
+
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.30,<1.0
+sqlalchemy>=2.0,<3.0
+pydantic>=2.7,<3.0
+pydantic-settings>=2.3,<3.0
+reportlab>=4.0
+python-dotenv>=1.0
+
+# PostgreSQL driver. Not needed when running against the default SQLite
+# database, but harmless to install.
+psycopg2-binary>=2.9
